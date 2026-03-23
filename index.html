@@ -126,18 +126,78 @@
         <p>Explore. Create. Inspire.</p>
     </section>
 
-    <section id="portrait">
-        <h2 class="section-title">The Portrait Gallery</h2>
-        <div class="grid">
-            <div class="card">
-                <h3 style="letter-spacing: 2px; text-transform: uppercase;">Capturing Soul</h3>
-                <p style="font-style: italic; margin-top: 15px; opacity: 0.8;">Timeless oil and charcoal studies that speak beyond the canvas.</p>
-                <a href="https://wa.me/919938423721" class="btn-action">Commission a Portrait</a>
-            </div>
-            <div class="card">
-                <h3 style="letter-spacing: 2px; text-transform: uppercase;">Pencil Studies</h3>
-                <p style="font-style: italic; margin-top: 15px; opacity: 0.8;">The raw beauty of graphite. Detailed character studies and likeness.</p>
-                <a href="https://wa.me/919938423721" class="btn-action">View Sketches</a>
+   <section id="portfolio" style="padding: 100px 5%; background: #fff;">
+    <h2 class="section-title">Studio Portfolio</h2>
+    <div class="gallery-grid">
+        
+        <div class="gallery-item">
+            <img src="https://www.instagram.com/p/CNfVHbfsZSx/?igsh=dmlvM2R6cWhuOWky" alt="Oil Portrait">
+            <div class="gallery-overlay">Traditional Portrait</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://www.instagram.com/p/CRsiOvZMnM9/?igsh=MXBkM2w3b3I3YWE3cQ==" alt="Pencil Sketch">
+            <div class="gallery-overlay">Pencil Study</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://www.instagram.com/p/CaDAdWFv8O5/?igsh=MTVuYTJqempic2o4MQ==" alt="Digital Illustration">
+            <div class="gallery-overlay">Digital Innovation</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://www.instagram.com/p/CcPt1bZBj4C/?igsh=MTJteHBzOHlhd296bA==" alt="Workshop Piece">
+            <div class="gallery-overlay">Workshop Project</div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        height: 350px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    /* The "Hover" Effect */
+    .gallery-overlay {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+        background: rgba(26, 26, 26, 0.9);
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        font-size: 0.9rem;
+        transition: bottom 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+        bottom: 0;
+    }
+</style>
             </div>
         </div>
     </section>
