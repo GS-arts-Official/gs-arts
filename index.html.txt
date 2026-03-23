@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Arts Official | Master the Art</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --accent-red: #e63946;
+            --accent-purple: #6d597a;
+            --accent-gold: #b5838d;
+            --paper-texture: #f4f1ea;
+        }
+
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+
+        body { background-color: var(--paper-texture); color: var(--primary-dark); }
+
+        /* Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-size: 1.8rem; font-weight: bold; color: var(--accent-purple); text-decoration: none; letter-spacing: 2px; }
+        .logo span { color: var(--accent-red); font-style: italic; }
+
+        nav a { text-decoration: none; color: var(--primary-dark); margin-left: 25px; font-weight: 500; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        nav a:hover { color: var(--accent-red); }
+
+        /* Hero - Studio Entrance */
+        .hero {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1600');
+            background-size: cover;
+            color: white;
+            padding: 0 5%;
+        }
+
+        .hero h1 { font-size: 4rem; letter-spacing: 8px; margin-bottom: 10px; }
+        .hero p { font-family: 'Arial', sans-serif; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.9; }
+
+        /* Section Headings */
+        .section-title { text-align: center; margin-bottom: 60px; font-size: 2.5rem; position: relative; padding-bottom: 15px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: var(--accent-red); }
+
+        /* PORTRAIT SECTION - Dark & Moody */
+        #portrait {
+            background: #121212; /* Dark Studio Background */
+            color: #e0e0e0;
+            padding: 100px 5%;
+        }
+
+        /* TRADITIONAL ART SECTION - Canvas/Paper Texture */
+        #classes {
+            background-color: #fdfaf5;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            padding: 100px 5%;
+        }
+
+        /* DIGITAL ART SECTION - Modern Gradient */
+        #digital {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 100px 5%;
+        }
+
+        /* Professional Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .card { 
+            background: rgba(255, 255, 255, 0.8); 
+            backdrop-filter: blur(10px);
+            padding: 50px 30px; 
+            border-radius: 4px; 
+            text-align: center; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: 0.5s;
+        }
+        #portrait .card { background: rgba(255, 255, 255, 0.05); color: white; border-color: rgba(255,255,255,0.1); }
+        .card:hover { transform: translateY(-15px); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+
+        .btn-action { 
+            display: inline-block; margin-top: 30px; padding: 12px 35px; 
+            background: var(--primary-dark); color: white; 
+            text-decoration: none; border-radius: 0; 
+            text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; transition: 0.3s;
+        }
+        .btn-action:hover { background: var(--accent-red); }
+
+        /* Footer */
+        footer { background: #0a0a0a; color: #888; padding: 80px 5% 30px; text-align: center; }
+        .social-links a { color: white; margin: 0 15px; font-size: 1.4rem; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent-red); }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } nav { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">GS <span>ARTS</span></a>
+        <nav>
+            <a href="#portrait">Portrait</a>
+            <a href="#classes">Traditional</a>
+            <a href="#digital">Digital</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <p>Est. 2026</p>
+        <h1>GS ARTS OFFICIAL</h1>
+        <p>Explore. Create. Inspire.</p>
+    </section>
+
+    <section id="portrait">
+        <h2 class="section-title">The Portrait Gallery</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="letter-spacing: 2px; text-transform: uppercase;">Capturing Soul</h3>
+                <p style="font-style: italic; margin-top: 15px; opacity: 0.8;">Timeless oil and charcoal studies that speak beyond the canvas.</p>
+                <a href="https://wa.me/919938423721" class="btn-action">Commission a Portrait</a>
+            </div>
+            <div class="card">
+                <h3 style="letter-spacing: 2px; text-transform: uppercase;">Pencil Studies</h3>
+                <p style="font-style: italic; margin-top: 15px; opacity: 0.8;">The raw beauty of graphite. Detailed character studies and likeness.</p>
+                <a href="https://wa.me/919938423721" class="btn-action">View Sketches</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="classes">
+        <h2 class="section-title">Traditional Mastery</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Workshop Classes</h3>
+                <p>Learn the heritage of watercolor and acrylics through our curated workshops.</p>
+                <a href="https://wa.me/919938423721" class="btn-action">Join Workshop</a>
+            </div>
+            <div class="card">
+                <h3>Artisan Commissions</h3>
+                <p>Bespoke artwork created with classic techniques for your home or office.</p>
+                <a href="https://wa.me/919938423721" class="btn-action">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="digital">
+        <h2 class="section-title">Digital Innovation</h2>
+        <div class="grid">
+            <div class="card" style="background: white;">
+                <h3>The Future of Art</h3>
+                <p>Concept art, character design, and pixel-perfect digital paintings.</p>
+                <a href="https://wa.me/919938423721" class="btn-action">Digital Services</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2 style="color: white; letter-spacing: 4px;">GS ARTS</h2>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/919938423721"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>Email: ogsarts@gmail.com | Phone: 9938423721</p>
+        <p style="margin-top: 40px; font-size: 0.7rem; letter-spacing: 2px;">© 2026 GS ARTS OFFICIAL. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
